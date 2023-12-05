@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="about_part ">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-4 col-lg-5 offset-lg-1">
+                <div class="about_img">
+                    <img src="{{ url_for('static', filename='img/about.png') }}" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8 col-lg-4">
+                <div class="about_text">
+
+                    <h2>Why Choose Our Mattress? </h2>
+                    <p>Experience a world of unparalleled comfort and rejuvenation with our expertly crafted 
+                        mattresses. Our mattresses are meticulously designed to provide the perfect balance
+                         of support and plushness, ensuring you enjoy a restful night's sleep every night. 
+                         Indulge in the luxury of innovative materials and cutting-edge technology that cater
+                          to your unique sleep preferences. Say goodbye to restless nights and embrace the serenity 
+                          of a mattress tailored just for you. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="chefs_part blog_item_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>Mattress</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-mb-4">
+            {% for i in product_det %}
+            <div class="col-sm-6 col-lg-4 mb-4 mt-2">
+                    <a href="/product/mattress/{{i.name}}">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="{{ url_for('static', filename='img/mattress/' + i['images'][0]) }}" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>{{i.name}}</h3>
+                           
+                        </div>
+                    </div>
+         </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

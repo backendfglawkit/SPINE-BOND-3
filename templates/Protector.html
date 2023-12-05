@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="about_part ">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-4 col-lg-5 offset-lg-1">
+                <div class="about_img">
+                    <img src="{{ url_for('static', filename='img/prom.png') }}" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8 col-lg-4">
+                <div class="about_text">
+
+                    <h2>Why Choose Our Mattress Protectors?</h2>
+                    <p>Our mattress protectors serve as the silent defenders of your sleep sanctuary. Crafted with precision 
+                        and care, these protectors are more than just a shield against spills and stains. They are the invisible guardians that extend the life 
+                        of your mattress, ensuring that it stays as fresh and comfortable as the day you brought it home. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="chefs_part blog_item_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>Protector</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            {% for i in product_det %}
+            <div class="col-sm-6 col-lg-4 mb-4 mt-2">
+               
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="{{ url_for('static', filename='img/protector/' + i['image']) }}" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>{{i.name}}</h3>
+                           
+                        </div>
+                    </div>
+         
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

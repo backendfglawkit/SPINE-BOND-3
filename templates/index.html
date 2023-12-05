@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h5>Discover the Art of Sleeping Well</h5>
+                        <h1>Premium Mattresses, Pillows, and Covers</h1>
+                        <p>Unleash the power of a good night's sleep with our meticulously crafted
+                            collection of premium mattresses, ergonomic pillows, and luxurious covers.
+                            Each product is designed with one goal in mind: to support your spine and
+                            enhance your overall well-being.</p>
+                        <div class="banner_btn">
+                            <div class="banner_btn_iner">
+                                <a href="product" class="btn_2">Product <img src="img/icon/left_1.svg" alt=""></a>
+                            </div>
+                            {# <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="popup-youtube video_popup">
+                                <span><img src="img/icon/play.svg" alt=""></span> Explore Our Story</a>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner part start-->
+
+<!--::exclusive_item_part start::-->
+<section class="exclusive_item_part blog_item_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Features</p>
+                    <h2>Why Us</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for item in feature_data %}
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="img/food_item/food_item_1.png" alt="">
+                    </div>
+                    <div class="single_blog_text">
+                        <h3>{{item.h}}</h3>
+                        <b>{{item.s_h}}</b>
+                        <hr>
+                        <p>{{item.c}}</p>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--::exclusive_item_part end::-->
+
+<!-- about part start-->
+<section class="about_part" id="target-section">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-4 col-lg-5 offset-lg-1">
+                <div class="about_img">
+                    <img src="static/img/about.png" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8 col-lg-4">
+                <div class="about_text">
+                    <h5>Our Heritage</h5>
+                    <h2>Where Comfort Meets Innovation.</h2>
+                    <h4>Awaken Your Best Self</h4>
+                    <p>Spine-Bond's legacy is one of continuous improvement and innovation. Over the years,
+                        we've dedicated ourselves to meeting your sleep needs with quality products. Our
+                        journey is a testament to our unwavering commitment to enhancing your sleep experience.
+                        Explore our heritage to discover how we've evolved to provide you with the best in comfort
+                        and support. </p>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- about part end-->
+<section class="chefs_part blog_item_section section_padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <h2>Our Product</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <a href="/product/mattress">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="static/img/team/chefs_1.png" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>Mattresses</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <a href="/product/pillow">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="static/img/team/chefs_2.png" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>Pillows</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <a href="/product/protector">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="static/img/team/chefs_3.png" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>Protector</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--::review_part start::-->
+<section class="review_part section_padding gray_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Testimonials</p>
+                    <h2>Customers Feedback</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="client_review_part owl-carousel">
+                    <div class="client_review_single media">
+                        <div class="client_img align-self-center">
+                            <img src="static/img/client/3.png" alt="">
+                        </div>
+                        <div class="client_review_text media-body">
+                            <p>Exceptional quality and comfort! The mattress, pillow, and protector exceeded
+                                my expectations. Excellent customer service made the buying process a breeze.
+                                Highly recommend!</p>
+
+                        </div>
+                    </div>
+                    <div class="client_review_single media">
+                        <div class="client_img align-self-center">
+                            <img src="static/img/client/2.png " alt="">
+                        </div>
+                        <div class="client_review_text media-body">
+                            <p>Outstanding bedding! The mattress, pillow, and protector provide unmatched comfort and
+                                durability.
+                                Ordering was easy, and the customer service team was helpful. Transform your sleep –
+                                worth every penny!</p>
+
+                        </div>
+                    </div>
+                    <div class="client_review_single media">
+                        <div class="client_img align-self-center">
+                            <img src="static/img/client/1.png" alt="">
+                        </div>
+                        <div class="client_review_text media-body">
+                            <p>Also made from. Give may saying meat there from heaven it lights face had is gathered
+                                god dea earth light for life may itself shall whales made they're blessed whales
+                                also made from give
+                                may saying meat. There from heaven it lights face had amazing place</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::review_part end::-->
+<section>
+    <div class="m-5">
+    </div>
+</section>
+
+
+<section class="about_part" id="target-section-1">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-4 col-md-5 offset-lg-1">
+
+                <div class="about_text">
+                    <div class="col-lg-4">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>Vardhman Furnishing, Jaipur.</h3>
+                                <p>8 Shaktidham Society, Lalarpura, Vaishali Nagar </p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3><a href="https://wa.me/918290599948">82905-99948</a></h3>
+                                <p>Contact Us On WhatsApp </p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3><a href="mailto:spinebond@gmail.com">spinebond@gmail.com</a></h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-6 ">
+
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.135039018129!2d75.71111049999999!3d26.8992091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4b2dd2a24a41%3A0xf73b46805bc4a240!2sVardhman%20furnishing!5e0!3m2!1sen!2sin!4v1700032396037!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="embed-responsive-item rounded-lg h-100"></iframe>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+
+{% endblock content %}
