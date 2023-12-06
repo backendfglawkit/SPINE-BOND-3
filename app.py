@@ -42,5 +42,9 @@ def product_det_size(value,value1,value2):
                 size=i['size']
     return render_template ('pro_det.html',data=data,size=size)
 
+@app.route('/terms_and_condition')
+def tc():
+    return render_template ('tc.html')
+    
 if __name__ == '__main__':
     app.run(debug=True)
